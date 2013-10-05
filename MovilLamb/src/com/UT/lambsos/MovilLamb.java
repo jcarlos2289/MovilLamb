@@ -12,6 +12,7 @@ import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,10 +29,10 @@ private LocationListener locationListener;
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_movil_lamb);
+		//requestWindowFeature(Window.FEATURE_NO_TITLE);
 		paciente = "Sin Nombre";	
 		
-		remitente = getPhoneNumber();
-		
+				
 		emergencia = (Button) findViewById(R.id.btEmergencia);
 		parto =(Button) findViewById(R.id.btParto);
 		consejo = (Button) findViewById(R.id.btConsejo);
@@ -54,7 +55,7 @@ private LocationListener locationListener;
 				actualizarPosicion();
 				detalle = "1";
 				try{
-				enviarsms(numeroDestino,paciente +" "+detalle+" "+latitud+" "+longitud+" "+remitente);
+				enviarsms(numeroDestino,paciente +" "+detalle+" "+latitud+" "+longitud);
 				}
 				catch(Exception e){
 					Toast.makeText(MovilLamb.this, "Fue aki", Toast.LENGTH_LONG).show();
@@ -74,7 +75,7 @@ private LocationListener locationListener;
 				actualizarPosicion();
 				detalle = "2";
 				try{
-					enviarsms(numeroDestino,paciente +" "+detalle+" "+latitud+" "+longitud+" "+remitente);
+					enviarsms(numeroDestino,paciente +" "+detalle+" "+latitud+" "+longitud);
 					}
 					catch(Exception e){
 						Toast.makeText(MovilLamb.this, "Fue aki", Toast.LENGTH_LONG).show();
@@ -103,7 +104,7 @@ private LocationListener locationListener;
 				actualizarPosicion();
 				detalle = "3";
 				try{
-					enviarsms(numeroDestino,paciente +" "+detalle+" "+latitud+" "+longitud+" "+remitente);
+					enviarsms(numeroDestino,paciente +" "+detalle+" "+latitud+" "+longitud);
 					}
 					catch(Exception e){
 						Toast.makeText(MovilLamb.this, "Fue aki", Toast.LENGTH_LONG).show();
@@ -213,11 +214,7 @@ private LocationListener locationListener;
     	}
     }
 	
-	
-	
-	
-	
-	
+		
 	//...........................
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
