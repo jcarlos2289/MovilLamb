@@ -37,7 +37,7 @@
              android:screenOrientation="portrait"></activity>
          
           <activity
-            android:name="com.UT.lambsos.NuevaTasa" 
+            android:name="com.UT.lambsos.NuevaNumero" 
             android:windowSoftInputMode="stateHidden"
              android:screenOrientation="portrait"></activity>
     </application>

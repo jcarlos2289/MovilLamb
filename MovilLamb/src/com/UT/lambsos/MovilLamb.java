@@ -1,8 +1,12 @@
 package com.UT.lambsos;
 
+
+
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -11,6 +15,7 @@ import android.telephony.SmsManager;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.View.OnClickListener;
@@ -22,7 +27,14 @@ public class MovilLamb extends Activity {
 Button emergencia, parto, consejo, camino;
 EditText nombre;
 String detalle, latitud, longitud, remitente, id, paciente;
-String numeroDestino = "67160002";
+String numeroDestino = "";
+@Override
+protected void onResume() {
+	// TODO Auto-generated method stub
+	super.onResume();
+	obtener_numero();
+}
+
 private LocationManager locationManager;
 private LocationListener locationListener;
 	@Override
@@ -31,6 +43,9 @@ private LocationListener locationListener;
 		setContentView(R.layout.activity_movil_lamb);
 		//requestWindowFeature(Window.FEATURE_NO_TITLE);
 		paciente = "Sin Nombre";	
+		
+		obtener_numero();
+		
 		
 				
 		emergencia = (Button) findViewById(R.id.btEmergencia);
@@ -53,7 +68,7 @@ private LocationListener locationListener;
 				}
 				//obtenerGPS();
 				actualizarPosicion();
-				detalle = "1";
+				detalle = "3";
 				try{
 				enviarsms(numeroDestino,paciente +" "+detalle+" "+latitud+" "+longitud);
 				}
@@ -102,7 +117,7 @@ private LocationListener locationListener;
 				}
 				//obtenerGPS();
 				actualizarPosicion();
-				detalle = "3";
+				detalle = "1";
 				try{
 					enviarsms(numeroDestino,paciente +" "+detalle+" "+latitud+" "+longitud);
 					}
@@ -164,6 +179,13 @@ private LocationListener locationListener;
 	
 	
 	//-----------------------------------------
+	
+	public void obtener_numero(){
+		DataBaseManager database = DataBaseManager.instance();  
+		Cursor curTasa = database.select("select Celular from Celular"); 
+        numeroDestino = obtenerValor(curTasa);
+	}
+	
 	private void actualizarPosicion()
     {
     	//Obtenemos una referencia al LocationManager
@@ -224,9 +246,43 @@ private LocationListener locationListener;
 	}
 	
 	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// TODO Auto-generated method stub
+		 switch (item.getItemId()) {
+	        case R.id.action_settings:
+	        	Intent i = new Intent(MovilLamb.this, NuevaNumero.class );
+	        	 startActivity(i);
+	            return true;
+	     
+	        default:
+	            return super.onOptionsItemSelected(item);
+	    }
+			
+	}
 	
-	
-	
+	 public String obtenerValor(Cursor c){
+			String val;
+		   
+		     try {
+		    	 if (c == null){
+		    	     	c.close();
+		    	     }else
+		    	     {
+		    	     	c.moveToFirst();
+		    	     }
+		    
+		    	 val = c.getString(0); 
+		    	 c.close();
+		    	 return val;
+		    			 
+		     }
+		     catch(Exception hj){
+		     	 //Toast.makeText(this,hj.toString(), Toast.LENGTH_LONG).show();
+		     	 return "";
+		     	}	
+		     
+		}
 	
 
 }
