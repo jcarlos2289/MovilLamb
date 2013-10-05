@@ -22,7 +22,7 @@ public class VerConsejo extends ListActivity{
 			  Cursor ids = database.select("select * from Recomendaciones");
 		        ids.moveToFirst();
 		        
-		       String[] origen = new String[] { ids.getColumnName(1), ids.getColumnName(2)};
+		       String[] origen = new String[] { ids.getColumnName(0), ids.getColumnName(1)};
 			   int[] destino = new int[] { R.id.tvID , R.id.tvTexto};     
 			
 		        @SuppressWarnings("deprecation")
@@ -30,6 +30,7 @@ public class VerConsejo extends ListActivity{
 		        
 		        ListView listView = getListView();
 				listView.setAdapter(adapterQuery);
+				registerForContextMenu(listView);
 			
 			
 		}catch(Exception e){

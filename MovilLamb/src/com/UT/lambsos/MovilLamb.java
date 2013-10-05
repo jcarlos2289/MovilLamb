@@ -21,14 +21,14 @@ public class MovilLamb extends Activity {
 Button emergencia, parto, consejo, camino;
 EditText nombre;
 String detalle, latitud, longitud, remitente, id, paciente;
-String numeroDestino = "67006819";
+String numeroDestino = "67160002";
 private LocationManager locationManager;
 private LocationListener locationListener;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_movil_lamb);
-			
+		paciente = "Sin Nombre";	
 		
 		remitente = getPhoneNumber();
 		
