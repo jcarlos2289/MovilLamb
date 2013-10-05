@@ -1,0 +1,75 @@
+*{
+	font-family: verdana;
+	font-size: 16px;
+	width: 100;
+	font-weight: 100;
+	color: #fff;
+	font-style: none;
+	list-style: none;
+	text-decoration: none;
+	padding: 0px;
+	margin: 0px;
+	display: block;
+	
+}
+body{
+background: url(../img/bg.png);
+}
+header{
+	background: #6ABA2F;
+	padding: 1em;
+	margin: 0%;
+}
+
+header h1{
+width: 	40%;
+display: inline-block;
+vertical-align: top;
+}
+nav{
+	width: 40%;
+	width: 50%;
+	display: inline-block;
+vertical-align: top;
+
+}
+nav ul li{
+	float: right;
+	
+}
+
+h2{
+	width: 100%;
+	color: rgb(0,0,0);
+	margin: 1% 5%;
+	font-size: 32px;
+}
+article{
+	width: 90%;
+	margin: 2% 5%;
+}
+aside{
+
+}
+.rojo,.amarillo , .verde,nav ul li{
+	padding: 1em 1.5em;
+	border-radius: 0.3em;
+}
+.rojo:hover,.amarillo:hover , .verde:hover{
+	padding: 1.5em 1.7em;
+}
+.rojo{
+	background:  #ee1111;
+	
+}
+.amarillo{
+	background: #ffc40d;
+}
+.verde{
+	background: #00a300;
+}
+
+header h1{
+
+
+}

@@ -1,0 +1,107 @@
+*{
+	font-family: verdana;
+	font-size: 16px;
+	width: 100;
+	font-weight: 100;
+	color: #fff;
+	font-style: none;
+	list-style: none;
+	text-decoration: none;
+	padding: 0px;
+	margin: 0px;
+	display: block;
+	
+}
+body{
+background: url(../img/bg.png);
+}
+
+header{
+	background: #6ABA2F;
+	padding: 1em;
+	margin: 0%;
+}
+
+#login{
+	width: 30%;
+	float: left;
+	background: #6ABA2F;
+	margin:5%  0%;
+
+	margin-left: 2%;
+
+}
+header h1{
+width: 	40%;
+display: inline-block;
+vertical-align: top;
+}
+nav{
+	width: 40%;
+	width: 50%;
+	display: inline-block;
+vertical-align: top;
+
+}
+nav ul li{
+	float: right;
+	margin: 0% 2%;
+}
+
+
+input,select{
+	width: 30%;
+	margin: 1% 25%;
+}
+
+#descarga{
+	width: 40%;
+	margin-right: 5%;
+	background: #e3a21a;
+	float: right;
+	text-align: center;
+	margin-top: 5%;
+
+}
+input,select{
+	background: rgba(0,0,0,0);
+	border: 0px solid #fff;
+	border-bottom: 1px solid #fff;
+	padding: 0.3em 0.5em;
+
+}
+
+button{
+
+	background: #ccc;
+	border: 0px solid #fff;
+	width: 40%;
+	margin: 1% 5%;
+	padding: 0.5em;
+	margin-bottom: 2%;
+	padding: 0.3em 0.5em;
+	float: left;
+	height: 30px;
+}
+button:hover{
+
+}
+h2{
+	float: left;
+	width: 95%;
+	font-size: 30px;
+	color: rgb(0,0,0);
+	margin-right: 5%;
+	padding: 1em 2em;
+}
+#mujeres{
+	float: left;
+	width: 90%;
+	margin: 1% 5%;
+}
+#mujeres ul li{
+	padding: 1em 0.5em;
+	background: #2d89ef;
+	border-bottom: 2px solid #fff;
+
+}
