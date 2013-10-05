@@ -5,7 +5,7 @@
 	<title>MOVIL LAMB</title>
 	<style type="text/css">
 	#lol li{
-    	background: #fff;
+    	/*background: #fff;*/
     	color: rgb(0,0,0); 
     	border-bottom: 2px solid #000; 
     	border-top: 2px solid #000; 
@@ -37,8 +37,25 @@
 
 				while($row = mysqli_fetch_array($result) )
   				{
-  					echo "<li class='rojo'>".$row['IDRecibido'] . " | " . $row['Nombre']." | ".$row["Latitud"]." |".$row["Longitud"]." | ".$row["Numero"];
+
+            if($row["codigo"]=3){
+
+
+  					echo "<li class='rojo'>".$row["codigo"]." |".$row['IDRecibido'] . " | " . $row['Nombre']." | ".$row["Latitud"]." |".$row["Longitud"]." | ".$row["Numero"];
   				echo "</li>";
+           }
+            if($row["codigo"]=2){
+
+
+            echo "<li class='amarillo'>".$row["codigo"]." |".$row['IDRecibido'] . " | " . $row['Nombre']." | ".$row["Latitud"]." |".$row["Longitud"]." | ".$row["Numero"];
+          echo "</li>";
+           }
+            if($row["codigo"]=1){
+
+
+            echo "<li class='verde'>".$row["codigo"]." |".$row['IDRecibido'] . " | " . $row['Nombre']." | ".$row["Latitud"]." |".$row["Longitud"]." | ".$row["Numero"];
+          echo "</li>";
+           }
   				
    		 		}
    		 		?>
