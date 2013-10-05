@@ -35,6 +35,11 @@
             android:name="com.UT.lambsos.VerConsejo" 
             android:windowSoftInputMode="stateHidden"
              android:screenOrientation="portrait"></activity>
+         
+          <activity
+            android:name="com.UT.lambsos.NuevaTasa" 
+            android:windowSoftInputMode="stateHidden"
+             android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

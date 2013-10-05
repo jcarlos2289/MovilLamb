@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:background="@color/Blanco"
             android:ems="10"
-            android:hint="Paciente"
+            android:hint="Paciente Apellido"
             android:inputType="textPersonName"
             android:textSize="35sp" />
 
