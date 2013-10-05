@@ -4,5 +4,11 @@
     <string name="app_name">MovilLamb</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <color name="fondo">#2868c7</color>
+    <color name="Verde">#197a13</color>
+    <color name="Rojo">#db2e23</color>
+    <color name="Amarillo">#E1ED07</color>
+    <color name="VerdeDark">#509887</color>
+    <color name="Blanco">#FFFFFF</color>
 
 </resources>

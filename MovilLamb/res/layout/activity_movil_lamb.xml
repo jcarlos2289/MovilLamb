@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fondo"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -20,6 +21,7 @@
             android:id="@+id/etPaciente"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:background="@color/Blanco"
             android:ems="10"
             android:hint="Paciente"
             android:inputType="textPersonName"
@@ -34,15 +36,19 @@
                 android:id="@+id/btParto"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
-                android:layout_weight="5"
-                android:text="Labor de Parto" />
+                android:padding="5dp"
+                android:text="Labor de Parto"
+                android:layout_weight="5" />
 
             <Button
                 android:id="@+id/btCamino"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_weight="5"
-                android:text="En Camino" />
+                android:padding="5dp"
+                android:text="En Camino" 
+                />
+
         </LinearLayout>
 
         <LinearLayout
@@ -56,13 +62,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_weight="5"
-                android:text="Emergencia" />
+                android:padding="5dp"
+                android:text="Emergencia" 
+                 />
 
             <Button
                 android:id="@+id/btConsejo"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_weight="5"
+                android:padding="5dp"
                 android:text="Consejo" />
 
         </LinearLayout>

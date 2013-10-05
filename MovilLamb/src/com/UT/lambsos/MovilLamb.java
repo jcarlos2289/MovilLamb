@@ -37,7 +37,10 @@ private LocationListener locationListener;
 		camino = (Button) findViewById(R.id.btCamino);
 		nombre = (EditText) findViewById(R.id.etPaciente);
 		
-		
+		parto.setBackgroundColor(getResources().getColor(R.color.Amarillo));
+		emergencia.setBackgroundColor(getResources().getColor(R.color.Rojo));
+		camino.setBackgroundColor(getResources().getColor(R.color.Verde));
+		consejo.setBackgroundColor(getResources().getColor(R.color.VerdeDark));
 		emergencia.setOnClickListener(new OnClickListener() {
 			
 			@Override
